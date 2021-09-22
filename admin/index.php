@@ -107,8 +107,8 @@
                                                     <td><?php echo $row['email'];  ?></td>
                                                     <td><?php echo $row['sodidong'];   ?></td>
                                                     <td><?php echo $row['tendv'];  ?></td>
-                                                    <td><a href="suaNhanVien.php?manv=<?php echo $row['manv']; ?>"><i class="fas fa-edit"></i></a></td>
-                                                    <td><a href="xoaNhanVien.php?manv=<?php echo $row['manv']; ?>"><i class="fas fa-trash"></i></a></td>
+                                                    <td><a href="suaNhanVien.php?manv=<?php echo $row['manv']; ?>"><i class="far fa-edit"></i></a></td>
+                                                    <td><a href="xoaNhanVien.php?manv=<?php echo $row['manv']; ?>"><i class="far fa-trash-alt"></i></a></td>
                                                 </tr>
                                     <?php 
                                                
