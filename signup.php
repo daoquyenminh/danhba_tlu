@@ -43,7 +43,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="pasword" id="pass1" name="pass1" class="form-control" placeholder="Mật khẩu" />
+                                                <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Mật khẩu" />
 
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="pasword" id="pass2" name="pass2" class="form-control" placeholder="Nhập lại mật khẩu" />
+                                                <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Nhập lại mật khẩu" />
 
                                             </div>
                                         </div>

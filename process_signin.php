@@ -15,8 +15,9 @@
     if(mysqli_num_rows($result_1) > 0){
         $row=mysqli_fetch_assoc($result_1);
         $pass_saved = $row['password'];
+        $status=$row['status'];
 
-        if(password_verify($pass,$pass_saved)){
+        if(password_verify($pass,$pass_saved )and $status==1){
             // Nếu khớp nhau > Tức là Đăng nhập thành công > Chuyển vào trang QUẢN TRỊ
             $_SESSION['login_ok']= $email;
             header("Location:admin/index.php");

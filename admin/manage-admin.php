@@ -33,6 +33,7 @@ if (!isset($_SESSION['login_ok'])) {
                             <th>Họ</th>
                             <th>Email đăng nhập</th>
                             <th>Ngày đăng ký</th>
+                            <th>Trạng thái</th>
                             <th>Hành động</th>
                         </tr>
 
@@ -65,6 +66,7 @@ if (!isset($_SESSION['login_ok'])) {
                                     $firstName = $rows['last_name'];
                                     $email = $rows['email'];
                                     $registration = $rows['registration_date'];
+                                    $status1 = $rows['status'];
 
                                     //Display the Values in our Table
                         ?>
@@ -75,15 +77,16 @@ if (!isset($_SESSION['login_ok'])) {
                                         <td><?php echo  $firstName; ?></td>
                                         <td><?php echo  $email; ?></td>
                                         <td><?php echo $registration; ?></td>
+                                        <td><?php echo $status1; ?></td>
                                         <td>
                                             <span class=" m-2 p-2 rounded" style="background-color :#7390fa" ;>
-                                                <a href="$" class="text-light"><i class="fas fa-key"></i> đổi mật khẩu </a>
+                                                <a href="#" class="text-light"><i class="fas fa-key"></i> đổi mật khẩu </a>
                                             </span>
                                             <span class=" m-2 p-2 rounded" style="background-color :#42d665" ;>
-                                                <a href="$" class="text-dark"><i class="fas fa-user-edit"></i> Sửa </a>
+                                                <a href="editAdmin.php" class="text-dark"><i class="fas fa-user-edit"></i> Sửa </a>
                                             </span>
                                             <span class=" m-2 p-2 rounded" style="background-color :#f73b4e" ;>
-                                                <a href="$" class="text-light"><i class="fas fa-trash"></i> Xoá </a>
+                                                <a href="#" class="text-light"><i class="fas fa-trash"></i> Xoá </a>
                                             </span>
                                         </td>
                                     </tr>

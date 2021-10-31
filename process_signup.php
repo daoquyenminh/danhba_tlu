@@ -13,6 +13,8 @@
     $last_name=$_POST['lastName'];
     $email=$_POST['email'];
     $pass1 =$_POST['pass1'];
+    $str=rand();
+    $code=md5($str);
 
     include('config/constants.php');
 
@@ -25,7 +27,7 @@
     }
     else{
         $pass_hash=password_hash($pass1,PASSWORD_DEFAULT);
-        $sql_2="INSERT INTO users (first_name,last_name,email,password) VALUE('$first_name','$last_name','$email','$pass_hash')";
+        $sql_2="INSERT INTO users (first_name,last_name,email,password,code) VALUE('$first_name','$last_name','$email','$pass_hash','$code')";
         $result_2=mysqli_query($conn,$sql_2);
 
         // Instantiation and passing `true` enables exceptions
@@ -38,7 +40,7 @@
             $mail->Host = 'smtp.gmail.com';// Set the SMTP server to send through
             $mail->SMTPAuth = true;// Enable SMTP authentication
             $mail->Username = 'daoquyenminh2@gmail.com';// SMTP username
-            $mail->Password = 'mukuakajsgwecuqk'; // SMTP password
+            $mail->Password = 'napzmdjnbkkybcml'; // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
             $mail->Port = 587; // TCP port to connect to
             $mail->CharSet = 'UTF-8';
@@ -56,14 +58,13 @@
             $tieude = '[Đăng ký tài khoản] Kích hoạt tài khoản để sử dụng';
             $mail->Subject = $tieude;
 
-            $str=rand();
-            $code=md5($str);
+        
 
             
             // Mail body content 
             $bodyContent = '<p>Chào mừng bạn đến với DANH BẠ TLU</p>'; 
             $bodyContent .= '<p>Bạn vui lòng nhấp vào đây để kích hoạt tài khoản :</p>';
-            $bodyContent .= '<p><a href="http://localhost/danhba_tlu/activation.php?account='.$email.'&code='.$code.'">Nhấp vào đây</a></p>';
+            $bodyContent .= '<p><a href="http://localhost/danhba_tlu/activation.php?email='.$email.'&code='.$code.'">Nhấp vào đây</a></p>';
 
 
             $mail->Body = $bodyContent;
